@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Entregable5
+namespace Entregable5.UI.Consultas
 {
-    public partial class Form1 : Form
+    public partial class cGrupos : Form
     {
-        public Form1()
+        public cGrupos()
         {
             InitializeComponent();
         }

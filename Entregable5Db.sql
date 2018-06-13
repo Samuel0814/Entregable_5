@@ -1,0 +1,4 @@
+CREATE DATABASE Entregable5Db
+GO
+USE Entregable5Db
+GO
