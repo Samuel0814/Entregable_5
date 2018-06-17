@@ -15,14 +15,18 @@ namespace Entregable5.Entidades
         public int Cantidad { get; set; }
         public int Grupox { get; set; }
         public int Integrantes { get; set; }
+
+        public virtual ICollection<GruposDetalle> Detalles { get; set; }
+
         public Grupos()
         {
-            GrupoId = 0;
-            Fecha = DateTime.Now;
-            Descripcion = string.Empty;
-            Cantidad = 0;
-            Grupox = 0;
-            Integrantes = 0;
+            this.Detalles = new List<GruposDetalle>();
+        }
+
+
+        public void AgregarDetalle(int Id, int GruposId, int PersonasId, String Cargo)
+        {
+            this.Detalles.Add(new GruposDetalle(Id, GrupoId, PersonasId, Cargo));
         }
     }
 }

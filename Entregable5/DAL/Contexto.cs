@@ -7,15 +7,19 @@ using System.Text;
 
 namespace Entregable5.DAL
 {
-    public class Contexto
+    public class Contexto : DbContext
     {
         public DbSet<Grupos> Grupo { get; set; }
+
+        public DbSet<Personas> Personas { get; set; }
+        public DbSet<Cargos> Cargos { get; set; }
+        // base("ConStr") para pasar la conexion a la clase base de EntityFramework 
         public Contexto() : base("ConStr")
         { }
 
-        internal void Dispose()
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new NotImplementedException();
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

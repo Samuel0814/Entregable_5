@@ -20,7 +20,7 @@ namespace Entregable5.Entidades
             this.GruposId = 0;
             this.PersonasId = 0;
         }
-        public GruposDetalle(int id, int GruposId, int PersonaId, String Cargo)
+        public GruposDetalle(int id, int GruposId, int PersonasId, String Cargo)
         {
             this.Id = id;
             this.GruposId = GruposId;
