@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace Entregable5.Entidades
 {
     public class Grupos
     {
-        [key]
+        [Key]
         public int GrupoId { get; set; }
         public DateTime Fecha { get; set; }
         public string Descripcion { get; set; }

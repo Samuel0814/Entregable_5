@@ -82,7 +82,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\cGrupos.resx">
+      <DependentUpon>cGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\rGrupos.resx">
+      <DependentUpon>rGrupos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -100,6 +107,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\Entregable5Db.sql" />
+    <None Include="Resources\icons8_Print_32.png" />
+    <None Include="Resources\icons8_Search_Property_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

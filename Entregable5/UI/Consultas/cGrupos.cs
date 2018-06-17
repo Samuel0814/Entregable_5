@@ -15,5 +15,10 @@ namespace Entregable5.UI.Consultas
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
