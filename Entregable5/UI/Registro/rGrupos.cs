@@ -17,7 +17,7 @@ namespace Entregable5.UI.Registro
         public rGrupos()
         {
             InitializeComponent();
-            LlenarComboBox;
+            //LlenarComboBox();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -97,34 +97,26 @@ namespace Entregable5.UI.Registro
                 MessageBox.Show("No se pudo eliminar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void LlenarComboBox()
+        private Grupos LlenaClase()
         {
-            Repositorio<Grupos> repositorio = new Repositorio<Grupos>(new Contexto());
-            CiudadcomboBox.DataSource = repositorio.GetList(c => true);
-            CiudadcomboBox.ValueMember = "CiudadId";
-            CiudadcomboBox.DisplayMember = "Nombre";
-        }
+            Grupos Grupo = new Grupos();
 
-        private Visitas LlenaClase()
-        {
-            Visitas visita = new Visitas();
-
-            visita.VisitaId = Convert.ToInt32(IdnumericUpDown.Value);
-            visita.Fecha = fechaDateTimePicker.Value;
-            visita.Comentarios = comentariosTextBox.Text;
+            Grupo.GrupoId = Convert.ToInt32(GrupoIdnumericUpDown.Value);
+            Grupo.Fecha = FechadateTimePicker.Value;
 
             //Agregar cada linea del Grid al detalle
-            foreach (DataGridViewRow item in detalleDataGridView.Rows)
+            foreach (DataGridViewRow item in DescripciontextBox.Rows)
             {
-                visita.AgregarDetalle(
+                Grupo.AgregarDetalle(
                     ToInt(item.Cells["Id"].Value),
-                    ToInt(item.Cells["VisitaId"].Value),
-                    ToInt(item.Cells["CiudadId"].Value),
-                    ToInt(item.Cells["Cantidad"].Value)
+                    ToInt(item.Cells["GruposId"].Value),
+                    ToInt(item.Cells["PersonasId"].Value),
+                    ToInt(item.Cells["Cargo"].Value)
                   );
             }
-            return visita;
+            return Grupo;
         }
+
 
         private void LlenarCampos(Grupos Grupo)
         {
