@@ -33,7 +33,7 @@
             this.FechagroupBox = new System.Windows.Forms.GroupBox();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
             this.Criteriolabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.CriteriotextBox);
             this.groupBox1.Controls.Add(this.Criteriolabel);
             this.groupBox1.Controls.Add(this.FiltrocomboBox);
             this.groupBox1.Controls.Add(this.Filtrolabel);
@@ -100,12 +100,12 @@
             this.Criteriolabel.TabIndex = 2;
             this.Criteriolabel.Text = "Criterio";
             // 
-            // textBox1
+            // CriteriotextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(369, 20);
-            this.textBox1.TabIndex = 3;
+            this.CriteriotextBox.Location = new System.Drawing.Point(231, 18);
+            this.CriteriotextBox.Name = "CriteriotextBox";
+            this.CriteriotextBox.Size = new System.Drawing.Size(369, 20);
+            this.CriteriotextBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -183,6 +183,7 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // cGrupos
             // 
@@ -212,7 +213,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Filtrolabel;
         private System.Windows.Forms.GroupBox FechagroupBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Label Criteriolabel;
         private System.Windows.Forms.ComboBox FiltrocomboBox;
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
